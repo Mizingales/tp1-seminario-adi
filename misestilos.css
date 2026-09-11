@@ -1,0 +1,214 @@
+* {
+    box-sizing: border-box;
+}
+/* importación de las fuentes de google Inter y Brygada 1918 */
+@import url('https://fonts.googleapis.com/css2?family=Brygada+1918:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #e7e7e7;
+    color: lab(12.25% 0 0);
+    margin: 0;
+    padding: 0;
+    
+}
+
+main {
+    background-color: #ffffff;
+    max-width: 95%;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-right: 10%;
+    padding-bottom: 0px;
+    padding-left: 10%;
+}
+
+/* estilos del menú de navegación */
+nav {
+    background-color: #ffffff;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
+    color:#7a7a7a;
+
+}
+/* comportamiento del menú de navegación */
+nav a:hover {
+    color: hsl(224, 55%, 62%);
+    border-bottom: 3px solid hsl(224, 55%, 62%);
+    padding-bottom: 6px;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 30px;
+    text-align: left;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+article {
+    margin-right: 20px;
+    margin-left: 20px;
+    max-width: 830px;
+}
+
+aside {
+    background-color: #ffffff;
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr minmax(300px, 45%);
+    gap: 20px;
+}
+/* comportamiento de vínculos en el texto*/
+section a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: normal;
+    color: hwb(224 28% 23%);
+
+}
+
+section a:hover {
+    color: #df5757;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+h1 {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    font-family: "Brygada 1918", serif;
+    font-size: 90px;
+    font-weight: bold;
+    color:hsl(0, 0%, 23%);
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: normal; 
+    color:hsl(224, 55%, 62%);
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: normal; 
+    color:hsl(0, 0%, 31%);
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    color:dimgray;
+    padding-right: 40px;
+}
+
+small {
+    font-size: 14px;
+    line-height: 1.5;
+    color:dimgray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer {
+    background-color: #ffffff;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);   
+}
+
+/* estilos que se aplican a la imagen ilustrativa */
+.adaptable {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+/* Estilos para los íconos de redes sociales */
+.icon {
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+}
+
+.flecha {
+    padding-top: 20px;
+    scale: 0.8;
+}
+
+/* ajustes responsive en resoluciones pequeñas. Busqué que se adapte a una única columna para facilitar la lectura, ubicando la imagen ilustrativa debajo del texto.*/
+@media (max-width: 1000px) {
+    main {
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+/* ajustes de estilo de las fuentes para conservar el estilo sin dificultar la lectura */
+    h1 {
+        font-size: 50px;
+        margin-top: 20px;
+        margin-bottom: 5px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 18px;
+        padding-right: 0px;
+    }
+
+    small {
+        font-size: 14px;
+    }
+/* ajustes para organizar todo en una columna */
+    article {
+        max-width: 900px;
+    }
+
+    aside {
+        width: 100%;
+        height: auto;
+    }
+
+    section {
+        grid-template-columns: 1fr;
+    }
+/* ajustes de la imagen en mobile */
+    .adaptable {
+        margin: 0 auto;
+        width: 100%;
+    }
+
+}
